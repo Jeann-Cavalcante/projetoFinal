@@ -8,6 +8,49 @@
   <title>Cadastro</title>
 </head>
 <body>
+
+  <div class="container">
+    <div class="header-form">
+      <h1>Cadastro de estudantes</h1>
+      <h3>Cadastro</h3>
+    </div>
+
+    <form>
+      <div class="fild">
+        <label for="name">Nome</label>
+        <input type="text" id="name" placeholder="Digite seu nome">
+        <span id="error-name" class="error">Campo invalido</span>
+      </div>
+
+      <div class="fild">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Digite seu email">
+        <span class="error error-email">Campo invalido</span>
+      </div>
+
+      <div class="fild">
+        <label for="photo">Link da foto de perfil</label>
+        <input type="text" id="photo" placeholder="ex: https://github.com/Jeann-Cavalcante.png">
+        <span class="error erro-photo">Campo invalido</span>
+      </div>
+
+      <div class="fild">
+        <label for="password">Senha</label>
+        <input type="text" id="password" placeholder="Digite uma senha">
+        <span class="error error-password">Campo invalido</span>
+      </div>
+
+      <div class="fild">
+        <label for="password-confirm">Confirme a senha</label>
+        <input type="text" id="password-confirm" placeholder="Confirme a senha">
+        <span class="error error-password-confirm">Campo invalido</span>
+      </div>
+
+      <button>Cadastrar</button>
+
+      <a href="../index.html">já possui conta ? <span>Faça seu Login</span></a>
+    </form>
+  </div>
   
   <script src="../scripts/db.js"></script>
   <script src="../scripts/registration.js"></script>

@@ -1,0 +1,145 @@
+:root {
+  --bg: #F8F8F8;
+  --primary: #FFC107;
+  --label: #6C6C6C;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'helvetica', sans-serif;
+  background-color: var(--bg);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+}
+
+.container h1{
+  padding-left: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.container h1::after {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 40px;
+  background-color: var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+form .fild {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form .fild input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  margin: 3px 0px;
+}
+
+form .fild input:focus {
+  outline: 2px solid var(--primary);
+}
+
+/* usar no JS */
+form .fild #error-name {
+  opacity: 1;
+}
+
+form .fild .error {
+  color: red;
+  font-size: 0.8rem;
+  padding-left: 5px;
+  opacity: 0;
+}
+
+form .fild label {
+  font-size: 0.9rem;
+  color: var(--label);
+  padding-left: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  transition: 0.3s;
+
+}
+
+form button:hover {
+  background-color: #FFA000;
+}
+
+form a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--label);
+}
+
+form a span {
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .container form {
+    padding: 0px;
+  }
+  .container h1 {
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+
+  .container h1::after {
+    width: 5px;
+    height: 30px;
+  }
+   .container h3 {
+    font-size: 1.2rem;
+   }
+}
