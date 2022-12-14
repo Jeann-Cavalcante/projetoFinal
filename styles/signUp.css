@@ -76,14 +76,19 @@ form .fild input {
   margin: 3px 0px;
 }
 
+form .fild input::placeholder {
+  color: #ccc;
+  font-size: 0.7rem;
+}
+
 form .fild input:focus {
   outline: 2px solid var(--primary);
 }
 
 /* usar no JS */
-form .fild #error-name {
+/* form .fild #error-name {
   opacity: 1;
-}
+} */
 
 form .fild .error {
   color: red;
