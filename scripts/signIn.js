@@ -14,6 +14,10 @@ function login(e) {
     (user) => user.email === email && user.password === password
   );
 
+    
+
+  if (userAlreadyExists) {
+
     let userLogado = {
       id: userAlreadyExists.id,
       name: userAlreadyExists.name,
@@ -21,12 +25,12 @@ function login(e) {
       photo: userAlreadyExists.photo,
       token: Math.random().toString(16).substr(2) + Math.random().toString(16).substr(2),
     }
-
-  if (userAlreadyExists) {
-    setStudentLogado(userLogado);
+    
+    setUserLogado(userLogado);
     window.location.href = "./pages/home.html";
     console.log(getUserLogado());
   } else {
-    alert("E-mail ou senha incorretos");
+    let error = document.querySelector("#error-user");
+    error.innerHTML = "Usuário ou senha inválidos";
   }
 }
