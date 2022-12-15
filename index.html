@@ -4,10 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/signUp.css">
   <title>login</title>
 </head>
 <body>
+
+  <div class="container">
+    <div class="header-form">
+      <h1>Cadastro de estudantes</h1>
+      <h3>Login</h3>
+    </div>
+
+    <form id="form-login">
+
+      <div class="fild">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Digite seu email">
+        <span id="error-email" class="error "></span>
+      </div>
+
+      <div class="fild">
+        <label for="password">Senha</label>
+        <input type="password" id="password" placeholder="Digite uma senha">
+        <span id="error-password" class="error "></span>
+      </div>
+
+      <button>Entrar</button>
+
+      <a href="./pages/signUp.html">Não possui conta ? <span>Faça seu Cadastro</span></a>
+    </form>
+  </div>
   
   <script src="./scripts/db.js"></script>
+  <script src="./scripts/signIn.js"></script>
 </body>
 </html>
