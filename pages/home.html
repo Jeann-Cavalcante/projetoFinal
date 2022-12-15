@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <title>Home</title>
+  <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+  <div id="container">
+    <aside class="sidebar">
+      <h1>Cadastro de Estudantes</h1>
+      <div class="div_avatar">
+        <img id="aside_avatar" class="avatar" src="" alt="Avatar">
+        <h2 id="aside_name">Karthi Madesh</h2>
+        <h3>Admin</h3>
+      </div>
+      <div class="div-menu">
+        <a class="active" href="#">
+          <i class="ph-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="#">
+          <i class="ph-student"></i>
+          <span>Estudantes</span>
+        </a>
+      </div>
+      <div class="div_btn-sair">
+        <a href="#">
+          <span>Sair</span>
+          <i class="ph-sign-out"></i>
+        </a>
+      </div>
+    </aside>
+    <div class="div_pai">
+      <header>
+        <div><input type="text" placeholder="Search..."><i class="ph-magnifying-glass"></i></div>
+      </header>
+      <main>
+        <div>
+          <h2>Lista de estudantes</h2>
+          <a href="#">
+            <span>Novo estudante</span>
+          </a>
+        </div>
+        <hr>
+          <table>
+            <thead>
+              <tr>
+                <th><!--img--></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Enroll Number</th>
+                <th>Date of admission</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img class="avatar" src="https://github.com/alefhyy.png" alt="Avatar"></td>
+                <td>Karthi</td>
+                <td>karthi@gmail.com</td>
+                <td>7305477760</td>
+                <td>123456305477760</td>
+                <td>08-Dev, 2021</td>
+                <td><i class="ph-pencil-simple"></i></td>
+                <td><i class="ph-trash"></i></td>
+              </tr>
+            </tbody>
+          </table>
+      </main>
+    </div>
+  </div>
+  <script src="../scripts/db.js"></script>
+  <script src="../scripts/home.js"></script>
+</body>
+
+</html>
