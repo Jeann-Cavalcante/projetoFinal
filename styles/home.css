@@ -2,10 +2,15 @@
 
 :root {
     --bg: #F8F8F8;
+    --graylight: rgb(195, 195, 195);
     --primary: #FFC107;
     --label: #6C6C6C;
     --aside-bg: #F2EAE1;
     --black: #000000;
+}
+
+body {
+    background-color: var(--bg);
 }
 
 * {
@@ -20,16 +25,12 @@
     display: flex;
 }
 
-.sidebar {
-    padding-top: 35px;
-    padding: 15px;
-}
-
 .sidebar h1 {
     margin-bottom: 75px;
     padding-left: 20px;
     font-size: 1.1rem;
     position: relative;
+    left: 15px;
 }
 
 .sidebar h1::after {
@@ -44,6 +45,7 @@
 }
 
 .sidebar {
+    padding-top: 15px;
     background-color: var(--aside-bg);
     width: 360px;
     height: 100vh;
@@ -51,8 +53,8 @@
 }
 
 .div_avatar {
-    width: 141px;
-    height: 214px;
+    width: 190px;
+    height: 234px;
     display: block;
     margin: 0 auto;
 }
@@ -121,6 +123,7 @@ a {
 }
 
 .div_btn-sair {
+    margin-left: -15px;
     position: absolute;
     bottom: 37px;
     width: 100%;
@@ -150,7 +153,7 @@ header {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: var(--bg);
+    background-color: #fff;
     height: 8vh;
     padding-right: 127px;
 }
@@ -162,7 +165,7 @@ header div {
 header div input {
     padding: 10px;
     border-radius: 9px;
-    border: solid 1px var(--label);
+    border: solid 1px var(--graylight);
 }
 
 .ph-magnifying-glass {
@@ -170,5 +173,73 @@ header div input {
     top: 5px;
     right: 5px;
     font-size: 32px;
-    color: var(--label);
+    color: var(--graylight);
+}
+
+hr {
+    background-color: var(--graylight);
+    border: none;
+    height: 1px;
+    margin: 0 3vw 0;
+}
+
+main div {
+    padding: 16px 3vw 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div h2 {
+    font-size: 23px;
+}
+
+main div a {
+    background-color: var(--primary);
+    border: none;
+    padding: 16px 42px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+main div a span {
+    font-weight: 600;
+    font-size: 17px;
+    color: #fff;
+}
+
+table{ 
+    width: 100%;
+    text-align: center;
+    border-collapse:collapse;
+}
+
+th {
+    padding: 32px;
+    color: var(--graylight);
+    font-weight: 500;
+}
+
+tr {
+    border: solid var(--bg);
+    border-width: 0 3vw 12px 3vw;
+}
+
+td {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+}
+
+td .avatar {
+    margin-top: 18px;
+    border-radius: 5px;
+    width: 86px;
+    height: 66px;
+    object-fit: cover;
+}
+
+.ph-pencil-simple, .ph-trash {
+    cursor: pointer;
+    font-size: 35px;
+    color: var(--primary);
 }
