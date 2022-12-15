@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/phosphor-icons"></script>
   <title>Home</title>
+  <link rel="stylesheet" href="/styles/home.css">
 </head>
+
 <body>
-  
+  <div id="container">
+    <aside class="sidebar">
+      <h1>Cadastro de Estudantes</h1>
+      <div class="div_avatar">
+        <img class="avatar" src="https://github.com/alefhyy.png" alt="Avatar">
+        <h2>Karthi Madesh</h2>
+        <h3>Admin</h3>
+      </div>
+      <div class="div-menu">
+        <a class="active" href="#">
+          <i class="ph-house"></i>
+          <span>Home</span>
+        </a>
+        <a href="#">
+          <i class="ph-student"></i>
+          <span>Estudantes</span>
+        </a>
+      </div>
+      <div class="div_btn-sair">
+        <a href="#">
+          <span>Sair</span>
+          <i class="ph-sign-out"></i>
+        </a>
+      </div>
+    </aside>
+    <div class="div_pai">
+      <header>
+        <div><input type="text" placeholder="Search..."><i class="ph-magnifying-glass"></i></div>
+      </header>
+      <main>
+        <div>
+          <h2>Lista de estudantes</h2>
+          <button>Novo estudante</button>
+        </div>
+        <hr>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Enroll Number</th>
+              <th>Date of admission</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="imagens/avatar.png" alt="Foto do Karthi Madesh"></td>
+              <td>Red</td>
+              <td>These are red.</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </div>
   <script src="../scripts/db.js"></script>
 </body>
+
 </html>

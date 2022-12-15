@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #F8F8F8;
+    --primary: #FFC107;
+    --label: #6C6C6C;
+    --aside-bg: #F2EAE1;
+    --black: #000000;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+#container {
+    display: flex;
+}
+
+.sidebar {
+    padding-top: 35px;
+    padding: 15px;
+}
+
+.sidebar h1 {
+    margin-bottom: 75px;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.sidebar h1::after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 28px;
+    background-color: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sidebar {
+    background-color: var(--aside-bg);
+    width: 360px;
+    height: 100vh;
+    position: relative;
+}
+
+.div_avatar {
+    width: 141px;
+    height: 214px;
+    display: block;
+    margin: 0 auto;
+}
+
+.div_avatar h2 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 100;
+    color: var(--primary);
+    text-align: center;
+}
+
+.div_avatar {
+    margin-bottom: 100px;
+}
+
+.avatar {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
+
+.div_avatar h2 {
+    margin-bottom: 13px;
+}
+
+.div_avatar h3 {
+    font-size: 16px;
+}
+
+.div-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.active {
+    background-color: var(--primary);
+    width: 257px;
+    height: 49px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-menu a {
+    display: flex;
+    gap: 15px;
+}
+
+.ph-house {
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.div_btn-sair {
+    position: absolute;
+    bottom: 37px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_btn-sair a {
+    display: flex;
+    gap: 50px;
+}
+
+.div_btn-sair span {
+    font-size: 21px;
+}
+
+.ph-sign-out {
+    font-size: 25px;
+}
+
+.div_pai {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--bg);
+    height: 8vh;
+    padding-right: 127px;
+}
+
+header div {
+    position: relative;
+}
+
+header div input {
+    padding: 10px;
+    border-radius: 9px;
+    border: solid 1px var(--label);
+}
+
+.ph-magnifying-glass {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 32px;
+    color: var(--label);
+}
