@@ -2,11 +2,13 @@ const students = getStudent();
 
 const form = document.querySelector("#form-student");
 
-const table = document.querySelector("table");
+const table = document.querySelector("tbody");
 
 const spanTable = document.querySelector("#span_table");
 
 const modal_bg = document.querySelector("#modal-bg");
+
+const modal = document.querySelector("#modal");
 
 const buttonNewStudent = document.querySelector("#btn-newStudent");
 
@@ -29,6 +31,7 @@ function newStudent(e) {
     cep: e.target[1].value,
     cidade: e.target[2].value,
     estado: e.target[3].value,
+    img: getUserLogado().photo,
     date: actualDate,
   };
 
@@ -42,52 +45,23 @@ function newStudent(e) {
 if (students.length == 0) {
   spanTable.textContent = `Nenhum aluno cadastrado`;
 } else {
-  // const thead = createElement('thead');
-  // const tbody = createElement('tbody');
-  // const tr = createElement('tr');
+  students.forEach(item => {
+    // reloadTable();
 
-  // thead.innerHTML = `
-  // <tr>
-  //                <th></th>
-  //                <th>Nome</th>
-  //                <th>CEP</th>
-  //                <th>Cidade</th>
-  //                <th>Estado</th>
-  //                <th>Data de cadastro</th>
-  //                <th></th>
-  //                <th></th>
-  //              </tr>
-  // `;
-
-  // students.forEach(item => {
-
-  // });
-  table.innerHTML += `
-            <thead>
-                <tr>
-                <th></th>
-                <th>Nome</th>
-                <th>CEP</th>
-                <th>Cidade</th>
-                <th>Estado</th>
-                <th>Data de cadastro</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-             <tbody>
-               <tr>
-                 <td><img class="avatar" src="https://github.com/alefhyy.png" alt="Avatar"></td>
-                 <td>Karthi</td>
-                 <td>karthi@gmail.com</td>
-                 <td>Garulhos</td>
-                 <td>São Paulo</td>
-                 <td>08-Dev, 2022</td>
-                 <td><i class="ph-pencil-simple"></i></td>
-                 <td><i class="ph-trash"></i></td>
-               </tr>
-             </tbody>
-   `;
+    table.innerHTML += `
+              
+                 <tr>
+                   <td><img class="avatar" src="${item.img}" alt="Avatar"></td>
+                   <td>${item.name}</td>
+                   <td>${item.cep}</td>
+                   <td>${item.cidade}</td>
+                   <td>${item.estado}</td>
+                   <td>${item.date}</td>
+                   <td><i class="ph-pencil-simple"></i></td>
+                   <td><i class="ph-trash"></i></td>
+                 </tr>
+     `;
+  });
 }
 
 let error_name_modal = document.querySelector("#error-name-modal");
@@ -108,18 +82,26 @@ const registrationUserModal = (student) => {
     let newStudantes = [...students, student];
     setStudent(newStudantes);
     modal_bg.style.display = "none";
+    modal.style.display = "none";
+    window.location.reload();
     chamaAlert("Cadastro de estudante realizado com sucesso");
   }
 };
 
 buttonNewStudent.addEventListener("click", () => {
   modal_bg.style.display = "block";
+  modal.style.display = "block"
 });
 
 closeButton.addEventListener("click", () => {
   modal_bg.style.display = "none";
+  modal.style.display = "none";
 });
 
 modal_bg.addEventListener('click', () => {
   modal_bg.style.display = 'none'
+  modal.style.display = "none";
 })
+
+
+const reloadTable = () => table.innerHTML = ''

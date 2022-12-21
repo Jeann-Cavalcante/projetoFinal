@@ -1,18 +1,120 @@
 #modal-bg {
     display: none;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.6); 
     position: absolute;
     z-index: 1;
   }
   
   #modal {
-    background-color: white;
+    position: absolute;
     width: 500px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 150px;
-    position: relative;
+    display: none;
     border-radius: 8px;
+    z-index: 4;
+    background-color: #fff;
+    top: 30%;
+    left: 40%;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    width: 500px;
+    padding-top: 40px;
+  }
+  
+  form .fild {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  form .fild input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    margin: 3px 0px;
+  }
+  
+  form .fild input::placeholder {
+    color: #ccc;
+    font-size: 0.7rem;
+  }
+  
+  form .fild input:focus {
+    outline: 2px solid var(--primary);
+  }
+
+  form .fild .error {
+    color: red;
+    font-size: 0.8rem;
+    padding-left: 5px;
+    height: 20px;
+  }
+  
+  form .fild label {
+    font-size: 0.9rem;
+    color: var(--label);
+    padding-left: 5px;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 0 20px 0;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #FFA000;
+  }
+  
+  form a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--label);
+  }
+  
+  form a span {
+    color: var(--primary);
+  }
+
+  .ph-x {
+    font-size: 45px;
+    cursor: pointer;
+    position: absolute;
+    right: 13px;
+    margin-top: 10px;
+    width: 45px;
+}
+  
+  @media (max-width: 600px) {
+    .container form {
+      padding: 0px;
+    }
+    .container h1 {
+      font-size: 1.4rem;
+      padding-left: 10px;
+    }
+  
+    .container h1::after {
+      width: 5px;
+      height: 30px;
+    }
+     .container h3 {
+      font-size: 1.2rem;
+     }
+  }
