@@ -174,6 +174,7 @@ header div input {
     right: 5px;
     font-size: 32px;
     color: var(--graylight);
+    cursor:pointer;
 }
 
 hr {
@@ -242,4 +243,19 @@ td .avatar {
     cursor: pointer;
     font-size: 35px;
     color: var(--primary);
+}
+
+#span_table {
+    margin-left:3vw;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #F00000;
+}
+
+#btn-cadastrar {
+    display:none;
+}
+
+#btn-editar {
+    display:none;
 }

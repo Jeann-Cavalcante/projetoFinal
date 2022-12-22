@@ -21,8 +21,6 @@ function registrationUser(e) {
     password: e.target[3].value,
   };
 
-  console.log(registration);
-
   const confirmPassword = e.target[4].value;
   const userAlreadyExists = users.find(
     (user) => user.email === registration.email
@@ -47,10 +45,10 @@ function registrationUser(e) {
 
   } else {
     // users.push(registration);
+    chamaAlert("Cadastro realizado com sucesso");
     let newuser = [...users, registration]
     setUser(newuser);
     e.target.reset();
-    alert("usuario  cadastrados com sucesso");
     window.location.href = "../index.html";
   }
 }

@@ -31,3 +31,5 @@ const verifyUser = () => {
 verifyUser();
 
 botaoSair.addEventListener("click", logout);
+
+
